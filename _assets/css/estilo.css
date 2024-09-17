@@ -99,6 +99,10 @@ body {
     font-size: 14px;
 }
 
+.btn_padrao:hover{
+    filter: brightness(1.2);
+}
+
 .content-form {
     width: 100%;
     height: calc(100vh - 40px);
@@ -136,10 +140,18 @@ body {
     outline: none;
 }
 
-.msg_retorno_edicao {
+.retorno_ajax_success {
     background: #e5ffdbde;
     border: 1px solid #87c073;
     padding: 10px;
     border-radius: 4px;
     color: #257808;
+}
+
+.retorno_ajax_error{
+    background: #ffdddd;
+    border: 1px solid #7b0000;
+    padding: 10px;
+    border-radius: 4px;
+    color: #7b0000;
 }

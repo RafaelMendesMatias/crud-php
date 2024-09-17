@@ -1,14 +1,13 @@
 <?php
+
 include_once('../_config/conexao_bd.php');
 
-$id = $_GET['id'];
+$id = filter_var($_POST['id'], FILTER_SANITIZE_NUMBER_INT);
 $sql = "DELETE FROM tb_users WHERE id=$id";
 
 if ($conn->query($sql) === TRUE) {
-    // Redirecionar para index.php na raiz do projeto
-    header('Location: ../index.php');
+    echo 1;
 } else {
-    // Redirecionar para uma página de erro ou mensagem personalizada
-    header('Location: ../index.php');
+    echo 0;
 }
 ?>
