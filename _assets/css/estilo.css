@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    font-family: Rubik;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    background-image: url("../img/bg.webp");
+    background-size: cover;
+    background-position: center;
+}
+
+
+.tabela-usuarios {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabela-cabecalho,
+.linha-tabela {
+    display: table-row;
+    background-color: #f1f1f1;
+}
+
+.tabela-cabecalho {
+    background-color: #472c8a;
+    color: white;
+}
+
+.celula-tabela {
+    display: table-cell;
+    padding: 10px;
+    border: 1px solid #35206b;
+    text-align: left;
+}
+
+.celula-tabela-id {
+    width: 50px;
+}
+
+.celula-tabela-name {
+    width: 200px;
+}
+
+.celula-tabela-email {
+    width: 250px;
+}
+
+.celula-tabela-date {
+    width: 150px;
+}
+
+.celula-tabela-actions {
+    width: 90px;
+}
+
+.btn {
+    padding: 5px 10px;
+    margin-right: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.btn-editar {
+    background-color: #b5c200;
+}
+
+.btn-deletar {
+    background-color: #f44336;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn_padrao {
+    background: #35206b;
+    padding: 15px 10px;
+    margin: 0 0 20px 0;
+    float: right;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+}
+
+.btn_padrao:hover{
+    filter: brightness(1.2);
+}
+
+.content-form {
+    width: 100%;
+    height: calc(100vh - 40px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-form .card-form {
+    width: 500px;
+    border-radius: 5px;
+    border: 1px solid #35206ba3;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0px 2px 0px 0px #35206b;
+}
+
+.content-form .card-form .linha-input {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.content-form .card-form label {
+    font-size: 16px;
+    color: #35206b;
+    font-weight: 500;
+}
+
+.content-form .card-form input {
+    border: 1px solid #ccc;
+    padding: 5px;
+    height: 36px;
+    border-radius: 4px;
+    outline: none;
+}
+
+.retorno_ajax_success {
+    background: #e5ffdbde;
+    border: 1px solid #87c073;
+    padding: 10px;
+    border-radius: 4px;
+    color: #257808;
+}
+
+.retorno_ajax_error{
+    background: #ffdddd;
+    border: 1px solid #7b0000;
+    padding: 10px;
+    border-radius: 4px;
+    color: #7b0000;
+}
