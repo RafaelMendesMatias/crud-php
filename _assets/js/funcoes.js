@@ -1,12 +1,6 @@
-//function excluir_usuario(id) {
-//    if (confirm("Deseja mesmo excluir este usuário?")) {
-//        window.location.href = '_processa/proc_excluir.php?id=' + id
-//    }
-//}
-
-
 function excluir_usuario(id) {
     var retorno_ajax = document.getElementById('retorno_ajax');
+    var retorno_users_deleted = document.getElementById('retorno_users_deleted');
     var linha_usuario = document.querySelector('[data-id="linha_user_' + id + '"]');
 
     if (confirm("Deseja mesmo excluir este usuário?")) {
@@ -19,12 +13,15 @@ function excluir_usuario(id) {
                 if (this.responseText == 1) {
                     retorno_ajax.innerHTML = '<div class="retorno_ajax_success">Usuario <b>ID ' + id + ' </b> deletado com sucesso</div>';
                     linha_usuario.remove();
+                    var linhasTabela = document.querySelectorAll('.linha-tabela').length;
+                    if (linhasTabela === 0) {
+                        retorno_users_deleted.innerHTML = '<h1 style="text-align: center; color: #472c8a">Todos os usuarios foram deletados.</h1>';
+                    }
                 } else if (this.responseText < 0) {
                     retorno_ajax.innerHTML = '<div class="retorno_ajax_error">Erro ao deletar Usuario <b>ID ' + id + ' </b></div>';
                 } else {
                     retorno_ajax.innerHTML = '<div class="retorno_ajax_error">Erro desconhecido</div>';
                 }
-
                 setTimeout(function () {
                     retorno_ajax.innerHTML = '';
                 }, 2500);
@@ -32,7 +29,7 @@ function excluir_usuario(id) {
         }
     }
 }
- 
+
 
 function cadastrar_usuario() {
     var retorno_ajax = document.getElementById('retorno_ajax');
