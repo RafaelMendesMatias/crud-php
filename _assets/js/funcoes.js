@@ -32,7 +32,7 @@ function excluir_usuario(id) {
         }
     }
 }
-
+ 
 
 function cadastrar_usuario() {
     var retorno_ajax = document.getElementById('retorno_ajax');
