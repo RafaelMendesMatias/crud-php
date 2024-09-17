@@ -59,9 +59,6 @@ function cadastrar_usuario() {
     }
 }
 
-
-
-
 function editar_usuario() {
     var retorno_ajax = document.getElementById('retorno_ajax');
     var id = document.getElementById('edit_id');
